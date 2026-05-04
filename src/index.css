@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand: #E50914; /* Netflix Red */
+  --color-bg-deep: #050505;
+  --color-bg-card: #121212;
+  --color-bg-surface: #1a1a1a;
+  --color-border-glow: rgba(255, 255, 255, 0.05);
+
+  --radius-bento: 1.5rem;
+}
+
+body {
+  @apply bg-bg-deep text-white font-sans antialiased;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+.movie-row-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.movie-row-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.glass-nav {
+  @apply backdrop-blur-md bg-black/60 transition-all duration-300;
+}
+
+.netflix-shadow {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+}
+
